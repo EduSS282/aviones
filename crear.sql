@@ -10,7 +10,7 @@ CREATE TABLE Aeropuerto (
 );
 
 CREATE TABLE Compagnia (
-    Codigo VARCHAR(3) PRIMARY KEY,
+    Codigo VARCHAR(10) PRIMARY KEY,
     Nombre VARCHAR(100)
 );
 
@@ -18,20 +18,19 @@ CREATE TABLE Fabricante (
     Fabricante VARCHAR(30) PRIMARY KEY
 );
 
-
-CREATE TABLE Avion (
-    Matricula VARCHAR(10) PRIMARY KEY,
-    ID_Modelo VARCHAR(30),              -- PUEDE SER NULL
-    Agno VARCHAR(4)                     -- PUEDE SER NULL
-    FOREIGN KEY ID_Modelo REFERENCES Modelo(ID)
-);
-
 CREATE TABLE Modelo (
     ID VARCHAR (4) PRIMARY KEY,
     Nombre VARCHAR(20) not NULL,    -- Tiene las restricciones del modelo E-R simplemente se usa una clave artificial para simplificar.
     Motor VARCHAR(20) not NULL,     -- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
     Fabricante VARCHAR(30),         -- Puede ser null.
-    FOREIGN KEY Fabricante REFERENCES Fabricante(Fabricante)
+    FOREIGN KEY (Fabricante) REFERENCES Fabricante(Fabricante)
+);
+
+CREATE TABLE Avion (
+    Matricula VARCHAR(10) PRIMARY KEY,
+    ID_Modelo VARCHAR(30),              -- PUEDE SER NULL
+    Agno VARCHAR(4),                    -- PUEDE SER NULL
+    FOREIGN KEY (ID_Modelo) REFERENCES Modelo(ID)
 );
 
 CREATE TABLE Vuelo (
@@ -47,11 +46,11 @@ CREATE TABLE Vuelo (
     Matricula VARCHAR(10),
     IATAdest VARCHAR(3),
     IATAsali VARCHAR(3),
-    Company VARCHAR(3),
-    FOREIGN KEY Matricula REFERENCES Avion(Matricula),
-    FOREIGN KEY IATAdest REFERENCES Aeropuerto(IATA),
-    FOREIGN KEY IATAsali REFERENCES Aeropuerto(IATA),
-    FOREIGN KEY Company REFERENCES Compagnia(Codigo)
+    Company VARCHAR(10),
+    FOREIGN KEY (Matricula) REFERENCES Avion(Matricula),
+    FOREIGN KEY (IATAdest) REFERENCES Aeropuerto(IATA),
+    FOREIGN KEY (IATAsali) REFERENCES Aeropuerto(IATA),
+    FOREIGN KEY (Company) REFERENCES Compagnia(Codigo)
 );
 
 
@@ -59,7 +58,7 @@ CREATE TABLE Cancelacion (
     ID VARCHAR(5),                              -- Va a haber que cambiarlo para que tienda de INCIDENCIA
     ID_Vuelo VARCHAR(8),
     Causa VARCHAR(20),
-    PRIMARY KEY (ID,ID_Vuelo)                   -- Hay que darle 2 vueltas a esto
+    PRIMARY KEY (ID,ID_Vuelo),                  -- Hay que darle 2 vueltas a esto
     FOREIGN KEY (ID_Vuelo) REFERENCES Vuelo(ID)
     -- FOREIGN KEY (ID) REFERENCES Incidencia(ID)
 );
@@ -80,6 +79,6 @@ CREATE TABLE Retraso (
     Motivo VARCHAR(15),
     Duracion NUMBER,
     PRIMARY KEY (ID,ID_Vuelo),
-    FOREIGN KEY ID_Vuelo REFERENCES Vuelo(ID)
+    FOREIGN KEY (ID_Vuelo) REFERENCES Vuelo(ID)
     -- FOREIGN KEY ID REFERENCES Incidencia(ID)
 );

@@ -1,9 +1,10 @@
 @SQL/aeropuertos.sql
 @SQL/compagnias.sql
 @SQL/fabricantes.sql
-@SQL/aviones.sql
 @SQL/modelos.sql
+@SQL/aviones.sql
 @SQL/vuelos.sql
 @SQL/cancelaciones.sql
 @SQL/desvios.sql
 @SQL/retrasos.sql
+COMMIT;
