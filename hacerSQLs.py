@@ -68,7 +68,7 @@ with open("C:\\Users\\eduar\\Documents\\SegundoIngInf\\SegundoCuatri\\Bases\\avi
     with open("C:\\Users\\eduar\\Documents\\SegundoIngInf\\SegundoCuatri\\Bases\\aviones\\SQL\\Vuelos.sql", mode='w', encoding='utf-8', newline='') as vuelos_sql:
         vuelos_reader = csv.reader(fichero_vuelos, delimiter=';')
         for vuelo in vuelos_reader:
-            ID, NUMERO, FECHA, HoraSalida, HoraSalidaEsperada, HoraLlegada, HoraLlegadaEstimada, Matricula, IATALlegada, IATASalida, AvionUsado, Company = vuelo
-            sql = f"INSERTO INTO Vuelo (ID, Numero_Vuelo, Fecha, Hora_Salida, Hora_Salida_Esperada, Hola_Llegada, Hora_Llegada_Estimada, Matricula, Aeropuerto_Llegada, Aeropuerto_Salida, Avion_Usado, Compagnia) VALUES ('{ID}', '{NUMERO}', '{FECHA}','{HoraSalida}', '{HoraSalidaEsperada}', '{HoraLlegada}' , '{HoraLlegadaEstimada}', '{Matricula}', '{IATALlegada}', '{IATASalida}', '{AvionUsado}', '{Company}');\n"
+            ID, NUMERO, FECHA, HoraSalida, HoraSalidaEsperada, HoraLlegada, HoraLlegadaEstimada, Matricula, IATALlegada, IATASalida, Company = vuelo
+            sql = f"INSERTO INTO Vuelo (ID, Numero_Vuelo, Fecha, Hora_Salida, Hora_Salida_Esperada, Hola_Llegada, Hora_Llegada_Estimada, Matricula, Aeropuerto_Llegada, Aeropuerto_Salida, Compagnia) VALUES ('{ID}', '{NUMERO}', '{FECHA}','{HoraSalida}', '{HoraSalidaEsperada}', '{HoraLlegada}' , '{HoraLlegadaEstimada}', '{Matricula}', '{IATALlegada}', '{IATASalida}', '{Company}');\n"
             vuelos_sql.write(sql)
 

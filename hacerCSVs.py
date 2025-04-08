@@ -46,7 +46,6 @@ with open("C:\\Users\\eduar\\Documents\\SegundoIngInf\\SegundoCuatri\\Bases\\avi
                 "MATRICULA_AVION" : tailNum,
                 "AEROPUERTO_LLEGADA" : destiata,
                 "AEROPUERTO_SALIDA" : originiata,
-                "AVION_USADO" : tailNum,
                 "COMPANY" : carrierCode
             }
             vuelo.append(vuelo_info)
@@ -187,7 +186,7 @@ with open("C:\\Users\\eduar\\Documents\\SegundoIngInf\\SegundoCuatri\\Bases\\avi
 with open("C:\\Users\\eduar\\Documents\\SegundoIngInf\\SegundoCuatri\\Bases\\aviones\\DATOS\\Vuelos.csv", mode='w', encoding='utf-8', newline='') as vuelos_file:
     vuelos_writer = csv.writer(vuelos_file, delimiter=';')
     for flight in vuelo:
-        vuelos_writer.writerow([flight['ID'], flight['NUMERO_VUELO'], flight['FECHA'], flight['HORA_SALIDA'],flight['HORA_SALIDA_ESPERADA'], flight['HORA_LLEGADA'], flight['HORA_LLEGADA_ESTIMADA'],flight['MATRICULA_AVION'], flight['AEROPUERTO_LLEGADA'], flight['AEROPUERTO_SALIDA'],flight['AVION_USADO'], flight['COMPANY']])
+        vuelos_writer.writerow([flight['ID'], flight['NUMERO_VUELO'], flight['FECHA'], flight['HORA_SALIDA'],flight['HORA_SALIDA_ESPERADA'], flight['HORA_LLEGADA'], flight['HORA_LLEGADA_ESTIMADA'],flight['MATRICULA_AVION'], flight['AEROPUERTO_LLEGADA'], flight['AEROPUERTO_SALIDA'], flight['COMPANY']])
 
 with open("C:\\Users\\eduar\\Documents\\SegundoIngInf\\SegundoCuatri\\Bases\\aviones\\DATOS\\Fabricantes.csv", mode='w', encoding='utf-8', newline='') as fabricante_file:
     fabricante_writer = csv.writer(fabricante_file, delimiter=';')
