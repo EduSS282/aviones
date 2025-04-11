@@ -1,272 +1,272 @@
-LAX;CA;USA;Los Angeles
-JFK;NY;USA;New York
-SFO;CA;USA;San Francisco
-LAS;NV;USA;Las Vegas
-ORD;IL;USA;Chicago
-LGA;NY;USA;New York
-STT;VI;USA;Charlotte Amalie
-MIA;FL;USA;Miami
-DFW;TX;USA;Dallas-Fort Worth
-PHL;PA;USA;Philadelphia
-STL;MO;USA;St Louis
-DCA;VA;USA;Arlington
-IAH;TX;USA;Houston
-BNA;TN;USA;Nashville
-HNL;HI;USA;Honolulu
-OGG;HI;USA;Kahului
-BOS;MA;USA;Boston
-IAD;VA;USA;Chantilly
-EWR;NJ;USA;Newark
-SAN;CA;USA;San Diego
-MCO;FL;USA;Orlando
-KOA;HI;USA;Kailua/Kona
-SEA;WA;USA;Seattle
-TUS;AZ;USA;Tucson
-LIH;HI;USA;Lihue
-RDU;NC;USA;Raleigh
-TPA;FL;USA;Tampa
-PHX;AZ;USA;Phoenix
-BWI;MD;USA;Baltimore
-SNA;CA;USA;Santa Ana
-SJC;CA;USA;San Jose
-RSW;FL;USA;Ft. Myers
-MCI;MO;USA;Kansas City
-MSY;LA;USA;New Orleans
-BHM;AL;USA;Birmingham
-PSP;CA;USA;Palm Springs
-SAT;TX;USA;San Antonio
-XNA;AR;USA;Fayetteville/Springdale/Rogers
-DEN;CO;USA;Denver
-PDX;OR;USA;Portland
-ATL;GA;USA;Atlanta
-BDL;CT;USA;Windsor Locks
-RIC;VA;USA;Richmond
-MFE;TX;USA;McAllen
-FAT;CA;USA;Fresno
-ELP;TX;USA;El Paso
-MSP;MN;USA;Minneapolis
-ONT;CA;USA;Ontario
-OKC;OK;USA;Oklahoma City
-IND;IN;USA;Indianapolis
-ABQ;NM;USA;Albuquerque
-PBI;FL;USA;West Palm Beach
-SJU;PR;USA;San Juan
-JAX;FL;USA;Jacksonville
-AUS;TX;USA;Austin
-MEM;TN;USA;Memphis
-SLC;UT;USA;Salt Lake City
-DTW;MI;USA;Detroit
-BUR;CA;USA;Burbank
-FLL;FL;USA;Ft. Lauderdale
-CMH;OH;USA;Columbus
-RNO;NV;USA;Reno
-ICT;KS;USA;Wichita
-TUL;OK;USA;Tulsa
-COS;CO;USA;Colorado Springs
-ORF;VA;USA;Norfolk
-SMF;CA;USA;Sacramento
-CLT;NC;USA;Charlotte
-DAY;OH;USA;Dayton
-STX;VI;USA;Christiansted
-OMA;NE;USA;Omaha
-GSO;NC;USA;Greensboro
-SDF;KY;USA;Louisville
-HSV;AL;USA;Huntsville
-EGE;CO;USA;Eagle
-SCC;AK;USA;Deadhorse
-BRW;AK;USA;Barrow
-ANC;AK;USA;Anchorage
-OTZ;AK;USA;Kotzebue
-OME;AK;USA;Nome
-ADQ;AK;USA;Kodiak
-BET;AK;USA;Bethel
-FAI;AK;USA;Fairbanks
-KTN;AK;USA;Ketchikan
-JNU;AK;USA;Juneau
-YAK;AK;USA;Yakutat
-CDV;AK;USA;Cordova
-SIT;AK;USA;Sitka
-PSG;AK;USA;Petersburg
-WRG;AK;USA;Wrangell
-ADK;AK;USA;Adak
-OAK;CA;USA;Oakland
-LGB;CA;USA;Long Beach
-GEG;WA;USA;Spokane
-BUF;NY;USA;Buffalo
-SYR;NY;USA;Syracuse
-BTV;VT;USA;Burlington
-ROC;NY;USA;Rochester
-SRQ;FL;USA;Sarasota
-SWF;NY;USA;Newburgh
-HPN;NY;USA;White Plains
-PWM;ME;USA;Portland
-HOU;TX;USA;Houston
-BQN;PR;USA;Aguadilla
-PSE;PR;USA;Ponce
-PIT;PA;USA;Pittsburgh
-CLE;OH;USA;Cleveland
-BTR;LA;USA;Baton Rouge
-CVG;KY;USA;Covington
-GSP;SC;USA;Greer
-GPT;MS;USA;Gulfport-Biloxi
-TLH;FL;USA;Tallahassee
-PNS;FL;USA;Pensacola
-SAV;GA;USA;Savannah
-DAB;FL;USA;Daytona Beach
-MOB;AL;USA;Mobile
-LIT;AR;USA;Little Rock
-MLB;FL;USA;Melbourne
-JAN;MS;USA;Jackson
-MKE;WI;USA;Milwaukee
-CHS;SC;USA;Charleston
-VPS;FL;USA;Valparaiso
-TYS;TN;USA;Knoxville
-BOI;ID;USA;Boise
-CAK;OH;USA;Akron
-LEX;KY;USA;Lexington
-CAE;SC;USA;Columbia
-MLI;IL;USA;Moline
-PVD;RI;USA;Providence
-CHA;TN;USA;Chattanooga
-CHO;VA;USA;Charlottesville
-MGM;AL;USA;Montgomery
-ILM;NC;USA;Wilmington
-CRW;WV;USA;Charleston
-ALB;NY;USA;Albany
-AVL;NC;USA;Asheville
-ROA;VA;USA;Roanoke
-TRI;TN;USA;Bristol
-MDT;PA;USA;Harrisburg
-PFN;FL;USA;Panama City
-ABE;PA;USA;Allentown
-MYR;SC;USA;Myrtle Beach
-PHF;VA;USA;Newport News
-GNV;FL;USA;Gainesville
-GRR;MI;USA;Grand Rapids
-FNT;MI;USA;Flint
-FAY;NC;USA;Fayetteville
-MEI;MS;USA;Meridian
-MSN;WI;USA;Madison
-FSM;AR;USA;Fort Smith
-LAW;OK;USA;Lawton
-OAJ;NC;USA;Jacksonville
-DHN;AL;USA;Dothan
-DSM;IA;USA;Des Moines
-AGS;GA;USA;Augusta
-CSG;GA;USA;Columbus
-SHV;LA;USA;Shreveport
-BQK;GA;USA;Brunswick
-VLD;GA;USA;Valdosta
-HHH;NA;USA;NA
-SGF;MO;USA;Springfield
-LYH;VA;USA;Lynchburg
-MLU;LA;USA;Monroe
-BMI;IL;USA;Bloomington
-EVV;IN;USA;Evansville
-EWN;NC;USA;New Bern
-FLO;SC;USA;Florence
-GTR;MS;USA;Columbus-Starkville-West Point
-SBN;IN;USA;South Bend
-MHT;NH;USA;Manchester
-GRK;TX;USA;Killeen
-AVP;PA;USA;Wilkes-Barre/Scranton
-LFT;LA;USA;Lafayette
-PIA;IL;USA;Peoria
-ATW;WI;USA;Appleton
-FWA;IN;USA;Fort Wayne
-CID;IA;USA;Cedar Rapids
-AEX;LA;USA;Alexandria
-LWB;WV;USA;Lewisburg
-ABY;GA;USA;Albany
-EYW;FL;USA;Key West
-MDW;IL;USA;Chicago
-ITO;HI;USA;Hilo
-MQT;NA;USA;NA
-SBP;CA;USA;San Luis Obispo
-SBA;CA;USA;Santa Barbara
-MRY;CA;USA;Monterey
-CLL;TX;USA;College Station
-AMA;TX;USA;Amarillo
-TXK;AR;USA;Texarkana
-LRD;TX;USA;Laredo
-ACT;TX;USA;Waco
-LBB;TX;USA;Lubbock
-CRP;TX;USA;Corpus Christi
-MAF;TX;USA;Midland
-GGG;TX;USA;Longview
-ABI;TX;USA;Abilene
-CMI;IL;USA;Champaign/Urbana
-TYR;TX;USA;Tyler
-ROW;NM;USA;Roswell
-GJT;CO;USA;Grand Junction
-GRB;WI;USA;Green Bay
-RST;MN;USA;Rochester
-LSE;WI;USA;La Crosse
-DBQ;IA;USA;Dubuque
-TVC;MI;USA;Traverse City
-AZO;MI;USA;Kalamazoo
-DAL;TX;USA;Dallas
-CWA;WI;USA;Mosinee
-TOL;OH;USA;Toledo
-FSD;SD;USA;Sioux Falls
-FAR;ND;USA;Fargo
-MBS;MI;USA;Saginaw
-DLH;MN;USA;Duluth
-BIS;ND;USA;Bismarck
-GFK;ND;USA;Grand Forks
-MOT;ND;USA;Minot
-LAN;MI;USA;Lansing
-BIL;MT;USA;Billings
-RAP;SD;USA;Rapid City
-BZN;MT;USA;Bozeman
-HTS;WV;USA;Huntington
-BGR;ME;USA;Bangor
-SUN;ID;USA;Hailey
-CPR;WY;USA;Casper
-HLN;MT;USA;Helena
-FCA;MT;USA;Kalispell
-JAC;WY;USA;Jackson
-LWS;ID;USA;Lewiston
-PSC;WA;USA;Pasco
-IDA;ID;USA;Idaho Falls
-ACV;CA;USA;Arcata/Eureka
-COD;WY;USA;Cody
-BTM;MT;USA;Butte
-EUG;OR;USA;Eugene
-GTF;MT;USA;Great Falls
-MSO;MT;USA;Missoula
-MFR;OR;USA;Medford
-RDM;OR;USA;Redmond
-BFL;CA;USA;Bakersfield
-IYK;CA;USA;Inyokern
-SMX;CA;USA;Santa Maria
-OXR;CA;USA;Oxnard
-RDD;CA;USA;Redding
-PMD;CA;USA;Palmdale
-CEC;CA;USA;Crescent City
-SGU;UT;USA;St George
-MOD;CA;USA;Modesto
-YUM;AZ;USA;Yuma
-OTH;OR;USA;North Bend
-CIC;CA;USA;Chico
-CLD;NA;USA;NA
-LMT;OR;USA;Klamath Falls
-IPL;CA;USA;Imperial
-MTJ;CO;USA;Montrose
-LNK;NE;USA;Lincoln
-SPI;IL;USA;Springfield
-ASE;CO;USA;Aspen
-HDN;CO;USA;Hayden
-CDC;UT;USA;Cedar City
-EKO;NV;USA;Elko
-PIH;ID;USA;Pocatello
-TWF;ID;USA;Twin Falls
-GCC;WY;USA;Gillette
-RKS;WY;USA;Rock Springs
-ISP;NY;USA;Islip
-HRL;TX;USA;Harlingen
-LCH;LA;USA;Lake Charles
-BRO;TX;USA;Brownsville
-FLG;AZ;USA;Flagstaff
-DRO;CO;USA;Durango
-GUC;CO;USA;Gunnison
+LAX;Los Angeles International;CA;USA;Los Angeles
+JFK;John F Kennedy Intl;NY;USA;New York
+SFO;San Francisco International;CA;USA;San Francisco
+LAS;McCarran International;NV;USA;Las Vegas
+ORD;Chicago OHare International;IL;USA;Chicago
+LGA;LaGuardia;NY;USA;New York
+STT;Cyril E. King;VI;USA;Charlotte Amalie
+MIA;Miami International;FL;USA;Miami
+DFW;Dallas-Fort Worth International;TX;USA;Dallas-Fort Worth
+PHL;Philadelphia Intl;PA;USA;Philadelphia
+STL;Lambert-St Louis International;MO;USA;St Louis
+DCA;Ronald Reagan Washington National;VA;USA;Arlington
+IAH;George Bush Intercontinental;TX;USA;Houston
+BNA;Nashville International;TN;USA;Nashville
+HNL;Honolulu International;HI;USA;Honolulu
+OGG;Kahului;HI;USA;Kahului
+BOS;Gen Edw L Logan Intl;MA;USA;Boston
+IAD;Washington Dulles International;VA;USA;Chantilly
+EWR;Newark Intl;NJ;USA;Newark
+SAN;San Diego International-Lindbergh;CA;USA;San Diego
+MCO;Orlando International;FL;USA;Orlando
+KOA;Kona International At Keahole;HI;USA;Kailua/Kona
+SEA;Seattle-Tacoma Intl;WA;USA;Seattle
+TUS;Tucson International;AZ;USA;Tucson
+LIH;Lihue;HI;USA;Lihue
+RDU;Raleigh-Durham International;NC;USA;Raleigh
+TPA;Tampa International;FL;USA;Tampa
+PHX;Phoenix Sky Harbor International;AZ;USA;Phoenix
+BWI;Baltimore-Washington International;MD;USA;Baltimore
+SNA;John Wayne /Orange Co;CA;USA;Santa Ana
+SJC;San Jose International;CA;USA;San Jose
+RSW;Southwest Florida International;FL;USA;Ft. Myers
+MCI;Kansas City International;MO;USA;Kansas City
+MSY;New Orleans International;LA;USA;New Orleans
+BHM;Birmingham International;AL;USA;Birmingham
+PSP;Palm Springs International;CA;USA;Palm Springs
+SAT;San Antonio International;TX;USA;San Antonio
+XNA;Northwest Arkansas Regional;AR;USA;Fayetteville/Springdale/Rogers
+DEN;Denver Intl;CO;USA;Denver
+PDX;Portland Intl;OR;USA;Portland
+ATL;William B Hartsfield-Atlanta Intl;GA;USA;Atlanta
+BDL;Bradley International;CT;USA;Windsor Locks
+RIC;Richmond International;VA;USA;Richmond
+MFE;McAllen Miller International;TX;USA;McAllen
+FAT;Fresno Yosemite International;CA;USA;Fresno
+ELP;El Paso International;TX;USA;El Paso
+MSP;Minneapolis-St Paul Intl;MN;USA;Minneapolis
+ONT;Ontario International;CA;USA;Ontario
+OKC;Will Rogers World;OK;USA;Oklahoma City
+IND;Indianapolis International;IN;USA;Indianapolis
+ABQ;Albuquerque International;NM;USA;Albuquerque
+PBI;Palm Beach International;FL;USA;West Palm Beach
+SJU;Luis Munoz Marin International;PR;USA;San Juan
+JAX;Jacksonville International;FL;USA;Jacksonville
+AUS;Austin-Bergstrom International;TX;USA;Austin
+MEM;Memphis International;TN;USA;Memphis
+SLC;Salt Lake City Intl;UT;USA;Salt Lake City
+DTW;Detroit Metropolitan-Wayne County;MI;USA;Detroit
+BUR;Burbank-Glendale-Pasadena;CA;USA;Burbank
+FLL;Fort Lauderdale-Hollywood Intl;FL;USA;Ft. Lauderdale
+CMH;Port Columbus Intl;OH;USA;Columbus
+RNO;Reno/Tahoe International;NV;USA;Reno
+ICT;Wichita Mid-Continent;KS;USA;Wichita
+TUL;Tulsa International;OK;USA;Tulsa
+COS;City of Colorado Springs Muni;CO;USA;Colorado Springs
+ORF;Norfolk International;VA;USA;Norfolk
+SMF;Sacramento International;CA;USA;Sacramento
+CLT;Charlotte/Douglas International;NC;USA;Charlotte
+DAY;James M Cox Dayton Intl;OH;USA;Dayton
+STX;Henry E. Rohlsen;VI;USA;Christiansted
+OMA;Eppley Airfield;NE;USA;Omaha
+GSO;Piedmont Triad International;NC;USA;Greensboro
+SDF;Louisville International-Standiford;KY;USA;Louisville
+HSV;Huntsville International;AL;USA;Huntsville
+EGE;Eagle County Regional;CO;USA;Eagle
+SCC;Deadhorse;AK;USA;Deadhorse
+BRW;Wiley Post Will Rogers Memorial;AK;USA;Barrow
+ANC;Ted Stevens Anchorage International;AK;USA;Anchorage
+OTZ;Ralph Wien Memorial;AK;USA;Kotzebue
+OME;Nome;AK;USA;Nome
+ADQ;Kodiak;AK;USA;Kodiak
+BET;Bethel;AK;USA;Bethel
+FAI;Fairbanks International;AK;USA;Fairbanks
+KTN;Ketchikan International;AK;USA;Ketchikan
+JNU;Juneau International;AK;USA;Juneau
+YAK;Yakutat;AK;USA;Yakutat
+CDV;Merle K (Mudhole) Smith;AK;USA;Cordova
+SIT;Sitka;AK;USA;Sitka
+PSG;James C. Johnson Petersburg;AK;USA;Petersburg
+WRG;Wrangell;AK;USA;Wrangell
+ADK;Adak;AK;USA;Adak
+OAK;Metropolitan Oakland International;CA;USA;Oakland
+LGB;Long Beach (Daugherty );CA;USA;Long Beach
+GEG;Spokane Intl;WA;USA;Spokane
+BUF;Buffalo Niagara Intl;NY;USA;Buffalo
+SYR;Syracuse-Hancock Intl;NY;USA;Syracuse
+BTV;Burlington International;VT;USA;Burlington
+ROC;Greater Rochester Intl;NY;USA;Rochester
+SRQ;Sarasota Bradenton International;FL;USA;Sarasota
+SWF;Stewart;NY;USA;Newburgh
+HPN;Westchester Cty;NY;USA;White Plains
+PWM;Portland International Jetport;ME;USA;Portland
+HOU;William P Hobby;TX;USA;Houston
+BQN;Rafael Hernandez;PR;USA;Aguadilla
+PSE;Mercedita;PR;USA;Ponce
+PIT;Pittsburgh International;PA;USA;Pittsburgh
+CLE;Cleveland-Hopkins Intl;OH;USA;Cleveland
+BTR;Baton Rouge Metropolitan, Ryan;LA;USA;Baton Rouge
+CVG;Cincinnati Northern Kentucky Intl;KY;USA;Covington
+GSP;Greenville-Spartanburg;SC;USA;Greer
+GPT;Gulfport-Biloxi Regional;MS;USA;Gulfport-Biloxi
+TLH;Tallahassee Regional;FL;USA;Tallahassee
+PNS;Pensacola Regional;FL;USA;Pensacola
+SAV;Savannah International;GA;USA;Savannah
+DAB;Daytona Beach International;FL;USA;Daytona Beach
+MOB;Mobile Regional;AL;USA;Mobile
+LIT;Adams;AR;USA;Little Rock
+MLB;Melbourne International;FL;USA;Melbourne
+JAN;Jackson International;MS;USA;Jackson
+MKE;General Mitchell International;WI;USA;Milwaukee
+CHS;Charleston AFB/International;SC;USA;Charleston
+VPS;Eglin Air Force Base;FL;USA;Valparaiso
+TYS;McGhee-Tyson;TN;USA;Knoxville
+BOI;Boise Air Terminal;ID;USA;Boise
+CAK;Akron-Canton Regional;OH;USA;Akron
+LEX;Blue Grass;KY;USA;Lexington
+CAE;Columbia Metropolitan;SC;USA;Columbia
+MLI;Quad City;IL;USA;Moline
+PVD;Theodore F Green State;RI;USA;Providence
+CHA;Lovell;TN;USA;Chattanooga
+CHO;Charlottesville-Albermarle;VA;USA;Charlottesville
+MGM;Montgomery Regional Apt;AL;USA;Montgomery
+ILM;Wilmington International;NC;USA;Wilmington
+CRW;Yeager;WV;USA;Charleston
+ALB;Albany Cty;NY;USA;Albany
+AVL;Asheville Regional;NC;USA;Asheville
+ROA;Roanoke Regional/ Woodrum;VA;USA;Roanoke
+TRI;Tri-Cities Regional;TN;USA;Bristol
+MDT;Harrisburg Intl;PA;USA;Harrisburg
+PFN;Panama City-Bay County International;FL;USA;Panama City
+ABE;Lehigh Valley International;PA;USA;Allentown
+MYR;Myrtle Beach International;SC;USA;Myrtle Beach
+PHF;Newport News/Williamsburg International;VA;USA;Newport News
+GNV;Gainesville Regional;FL;USA;Gainesville
+GRR;Kent County International;MI;USA;Grand Rapids
+FNT;Bishop;MI;USA;Flint
+FAY;Fayetteville Municipal;NC;USA;Fayetteville
+MEI;Key;MS;USA;Meridian
+MSN;Dane County Regional;WI;USA;Madison
+FSM;Fort Smith Regional;AR;USA;Fort Smith
+LAW;Lawton-Ft Sill Regional;OK;USA;Lawton
+OAJ;Albert J Ellis;NC;USA;Jacksonville
+DHN;Dothan;AL;USA;Dothan
+DSM;Des Moines International;IA;USA;Des Moines
+AGS;Bush;GA;USA;Augusta
+CSG;Columbus Metropolitan;GA;USA;Columbus
+SHV;Shreveport Regional;LA;USA;Shreveport
+BQK;Glynco Jetport;GA;USA;Brunswick
+VLD;Valdosta Regional;GA;USA;Valdosta
+HHH;Hilton Head;NA;USA;NA
+SGF;Springfield-Branson Regional;MO;USA;Springfield
+LYH;Lynchburg Municipal-Preston Glenn;VA;USA;Lynchburg
+MLU;Monroe Regional;LA;USA;Monroe
+BMI;Central Illinois Regional;IL;USA;Bloomington
+EVV;Evansville Regional;IN;USA;Evansville
+EWN;Craven County Regional;NC;USA;New Bern
+FLO;Florence Regional;SC;USA;Florence
+GTR;Golden Triangle Regional;MS;USA;Columbus-Starkville-West Point
+SBN;South Bend Regional;IN;USA;South Bend
+MHT;Manchester;NH;USA;Manchester
+GRK;Robert Gray AAF;TX;USA;Killeen
+AVP;Wilkes-Barre/Scranton Intl;PA;USA;Wilkes-Barre/Scranton
+LFT;Lafayette Regional;LA;USA;Lafayette
+PIA;Greater Peoria Regional;IL;USA;Peoria
+ATW;Outagamie County Regional;WI;USA;Appleton
+FWA;Fort Wayne International;IN;USA;Fort Wayne
+CID;Eastern Iowa;IA;USA;Cedar Rapids
+AEX;Alexandria International;LA;USA;Alexandria
+LWB;Greenbrier Valley;WV;USA;Lewisburg
+ABY;Southwest Georgia Regional;GA;USA;Albany
+EYW;Key West International;FL;USA;Key West
+MDW;Chicago Midway;IL;USA;Chicago
+ITO;Hilo International;HI;USA;Hilo
+MQT;Marquette County Airport;NA;USA;NA
+SBP;San Luis Obispo Co-McChesney;CA;USA;San Luis Obispo
+SBA;Santa Barbara Municipal;CA;USA;Santa Barbara
+MRY;Monterey Peninsula;CA;USA;Monterey
+CLL;Easterwood;TX;USA;College Station
+AMA;Amarillo International;TX;USA;Amarillo
+TXK;Texarkana Regional-Webb;AR;USA;Texarkana
+LRD;Laredo International;TX;USA;Laredo
+ACT;Waco Regional;TX;USA;Waco
+LBB;Lubbock International;TX;USA;Lubbock
+CRP;Corpus Christi International;TX;USA;Corpus Christi
+MAF;Midland International;TX;USA;Midland
+GGG;Gregg County;TX;USA;Longview
+ABI;Abilene Regional;TX;USA;Abilene
+CMI;University of Illinois-Willard;IL;USA;Champaign/Urbana
+TYR;Tyler Pounds;TX;USA;Tyler
+ROW;Roswell Industrial Air Center;NM;USA;Roswell
+GJT;Walker;CO;USA;Grand Junction
+GRB;Austin Straubel International;WI;USA;Green Bay
+RST;Rochester International;MN;USA;Rochester
+LSE;La Crosse Municipal;WI;USA;La Crosse
+DBQ;Dubuque Municipal;IA;USA;Dubuque
+TVC;Cherry Capital;MI;USA;Traverse City
+AZO;Kalamazoo County;MI;USA;Kalamazoo
+DAL;Dallas Love;TX;USA;Dallas
+CWA;Central Wisconsin;WI;USA;Mosinee
+TOL;Toledo Express;OH;USA;Toledo
+FSD;Joe Foss;SD;USA;Sioux Falls
+FAR;Hector International;ND;USA;Fargo
+MBS;Mbs International;MI;USA;Saginaw
+DLH;Duluth International;MN;USA;Duluth
+BIS;Bismarck Municipal;ND;USA;Bismarck
+GFK;Grand Forks International;ND;USA;Grand Forks
+MOT;Minot International;ND;USA;Minot
+LAN;Capital City;MI;USA;Lansing
+BIL;Billings Logan Intl;MT;USA;Billings
+RAP;Rapid City Regional;SD;USA;Rapid City
+BZN;Gallatin;MT;USA;Bozeman
+HTS;Tri-State/Walker-Long;WV;USA;Huntington
+BGR;Bangor International;ME;USA;Bangor
+SUN;Friedman Memorial;ID;USA;Hailey
+CPR;Natrona County Intl;WY;USA;Casper
+HLN;Helena Regional;MT;USA;Helena
+FCA;Glacier Park Intl;MT;USA;Kalispell
+JAC;Jackson Hole;WY;USA;Jackson
+LWS;Lewiston-Nez Perce County;ID;USA;Lewiston
+PSC;Tri-Cities;WA;USA;Pasco
+IDA;Idaho Falls Regional;ID;USA;Idaho Falls
+ACV;Arcata;CA;USA;Arcata/Eureka
+COD;Yellowstone Regional;WY;USA;Cody
+BTM;Bert Mooney;MT;USA;Butte
+EUG;Mahlon Sweet;OR;USA;Eugene
+GTF;Great Falls Intl;MT;USA;Great Falls
+MSO;Missoula International;MT;USA;Missoula
+MFR;Rogue Valley International;OR;USA;Medford
+RDM;Roberts;OR;USA;Redmond
+BFL;Meadows;CA;USA;Bakersfield
+IYK;Inyokern;CA;USA;Inyokern
+SMX;Santa Maria Pub/Capt G Allan Hancock;CA;USA;Santa Maria
+OXR;Oxnard;CA;USA;Oxnard
+RDD;Redding Municipal;CA;USA;Redding
+PMD;Palmdale Production Flight;CA;USA;Palmdale
+CEC;Jack McNamara;CA;USA;Crescent City
+SGU;St George Muni;UT;USA;St George
+MOD;Modesto City-County-Harry Sham;CA;USA;Modesto
+YUM;Yuma MCAS-Yuma International;AZ;USA;Yuma
+OTH;North Bend Muni;OR;USA;North Bend
+CIC;Chico Municipal;CA;USA;Chico
+CLD;MC Clellan-Palomar Airport;NA;USA;NA
+LMT;Klamath Falls International;OR;USA;Klamath Falls
+IPL;Imperial County;CA;USA;Imperial
+MTJ;Montrose Regional;CO;USA;Montrose
+LNK;Lincoln Municipal;NE;USA;Lincoln
+SPI;Capital;IL;USA;Springfield
+ASE;Aspen-Pitkin Co/Sardy;CO;USA;Aspen
+HDN;Yampa Valley;CO;USA;Hayden
+CDC;Cedar City Muni;UT;USA;Cedar City
+EKO;Elko Regional;NV;USA;Elko
+PIH;Pocatello Regional;ID;USA;Pocatello
+TWF;Joslin Field - Magic Valley;ID;USA;Twin Falls
+GCC;Gillette-Campbell County;WY;USA;Gillette
+RKS;Rock Springs-Sweetwater County;WY;USA;Rock Springs
+ISP;Long Island - MacArthur;NY;USA;Islip
+HRL;Valley International;TX;USA;Harlingen
+LCH;Lake Charles Regional;LA;USA;Lake Charles
+BRO;Brownsville/S.Padre Island International;TX;USA;Brownsville
+FLG;Flagstaff Pulliam;AZ;USA;Flagstaff
+DRO;Durango-La Plata County;CO;USA;Durango
+GUC;Gunnison County;CO;USA;Gunnison

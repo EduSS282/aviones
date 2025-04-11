@@ -1,9 +1,6 @@
--- CREATE TABLE Incidencia (
---     ID VARCHAR(5) PRIMARY KEY
--- );
-
 CREATE TABLE Aeropuerto (
     IATA VARCHAR(3) PRIMARY KEY,
+    Nombre VARCHAR(50),
     Estado VARCHAR(5),              -- Contemplamos que puedan ser NULL
     Pais VARCHAR(15),
     Ciudad VARCHAR(40)

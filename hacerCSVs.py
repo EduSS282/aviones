@@ -147,6 +147,7 @@ with open("C:\\Users\\eduar\\Documents\\SegundoIngInf\\SegundoCuatri\\Bases\\avi
         if (originiata != ""):
             aeropuerto_salida = {
                 "IATA" : originiata,
+                "NOMBRE" : originairport,
                 "ESTADO" : originstate,
                 "PAIS" : origincountry,
                 "CIUDAD" : origincity
@@ -158,6 +159,7 @@ with open("C:\\Users\\eduar\\Documents\\SegundoIngInf\\SegundoCuatri\\Bases\\avi
 
             aeropuerto_llegada = {
                 "IATA" : destiata,
+                "NOMBRE" : destairport,
                 "ESTADO" : deststate,
                 "PAIS" : destcountry,
                 "CIUDAD" : destcity
@@ -199,7 +201,7 @@ with open("C:\\Users\\eduar\\Documents\\SegundoIngInf\\SegundoCuatri\\Bases\\avi
 with open("C:\\Users\\eduar\\Documents\\SegundoIngInf\\SegundoCuatri\\Bases\\aviones\\DATOS\\Aeropuertos.csv", mode='w', encoding='utf-8', newline='') as airport_file:
     airport_writer = csv.writer(airport_file, delimiter=';')
     for airport in aeropuerto:
-        airport_writer.writerow([airport['IATA'],airport['ESTADO'],airport['PAIS'],airport['CIUDAD']])
+        airport_writer.writerow([airport['IATA'], airport['NOMBRE'],airport['ESTADO'],airport['PAIS'],airport['CIUDAD']])
 
 with open("C:\\Users\\eduar\\Documents\\SegundoIngInf\\SegundoCuatri\\Bases\\aviones\\DATOS\\Compagnias.csv", mode='w', encoding='utf-8', newline='') as companies_file:
     companies_writer = csv.writer(companies_file, delimiter=';')

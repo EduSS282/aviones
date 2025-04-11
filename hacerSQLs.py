@@ -12,8 +12,8 @@ with open("C:\\Users\\eduar\\Documents\\SegundoIngInf\\SegundoCuatri\\Bases\\avi
     with open("C:\\Users\\eduar\\Documents\\SegundoIngInf\\SegundoCuatri\\Bases\\aviones\\SQL\\aeropuertos.sql", mode='w', encoding='utf-8', newline='') as aero_sql:
         aero_reader = csv.reader(fichero_aero, delimiter=';')
         for aero in aero_reader:
-            IATA, ESTADO, PAIS, CIUDAD = aero
-            sql = f"INSERT INTO Aeropuerto (IATA, estado, pais, ciudad) VALUES ('{IATA}', '{ESTADO}', '{PAIS}', '{CIUDAD}');\n"
+            IATA, NOMBRE , ESTADO, PAIS, CIUDAD = aero
+            sql = f"INSERT INTO Aeropuerto (IATA, NOMBRE, estado, pais, ciudad) VALUES ('{IATA}', '{NOMBRE}' , '{ESTADO}', '{PAIS}', '{CIUDAD}');\n"
             aero_sql.write(sql)
 
 with open("C:\\Users\\eduar\\Documents\\SegundoIngInf\\SegundoCuatri\\Bases\\aviones\\DATOS\\Cancelaciones.csv") as fichero_cancelaciones:
