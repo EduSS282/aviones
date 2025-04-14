@@ -1,3 +1,4 @@
+set define off
 @SQL/aeropuertos.sql
 @SQL/compagnias.sql
 @SQL/fabricantes.sql
