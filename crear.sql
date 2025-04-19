@@ -24,7 +24,7 @@ CREATE TABLE Modelo (
 );
 
 CREATE TABLE Avion (
-    Matricula VARCHAR(10) PRIMARY KEY,
+    Matricula VARCHAR(6) PRIMARY KEY,
     ID_Modelo VARCHAR(30),              -- PUEDE SER NULL
     Agno VARCHAR(4),                    -- PUEDE SER NULL
     FOREIGN KEY (ID_Modelo) REFERENCES Modelo(ID)

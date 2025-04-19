@@ -4,8 +4,8 @@ set define off
 @SQL/fabricantes.sql
 @SQL/modelos.sql
 @SQL/aviones.sql
-@SQL/vuelos.sql
+@SQL/Vuelos.sql
 @SQL/cancelaciones.sql
-@SQL/desvios.sql
-@SQL/retrasos.sql
+@SQL/Desvios.sql
+@SQL/Retrasos.sql
 COMMIT;
