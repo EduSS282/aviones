@@ -7,6 +7,6 @@ GROUP BY AE.nombre, AE.iata
 SELECT S.nombre, S.iata, S.media
 FROM edadMediaAeropuertos S
 WHERE S.media = (
-SELECT MIN(media) as minimo
-FROM edadMediaAeropuertos A
+    SELECT MIN(media) as minimo
+    FROM edadMediaAeropuertos A
 );
