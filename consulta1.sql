@@ -1,10 +1,11 @@
-WITH VUELOS_RETRASOS AS (
+WITH RETRASOS_COMPAGNIAS AS (
     SELECT 
-        V.Company AS Codigo_Compania,
-        R.Duracion AS Retraso
-    FROM Vuelo V
-    JOIN Retraso R ON V.ID = R.ID_Vuelo
-    WHERE R.Duracion IS NOT NULL
+	    V.Company AS Codigo_Compania,
+	    AVG(R.Duracion) AS Retraso_Promedio
+	FROM Vuelo V
+	JOIN Retraso R ON V.ID = R.ID_Vuelo
+	WHERE R.Duracion IS NOT NULL
+	GROUP BY V.Company
 ),
 COMPANIAS_VUELOS_MINIMOS AS (
     SELECT 
@@ -15,20 +16,12 @@ COMPANIAS_VUELOS_MINIMOS AS (
     GROUP BY V.Company, V.Fecha
     HAVING COUNT(V.ID) >= 1000
 ),
-MEDIA_RETRASOS_COMPANIA AS (
-    SELECT 
-        VR.Codigo_Compania AS Company,
-        AVG(VR.Retraso) AS Media_Retrasos
-    FROM VUELOS_RETRASOS VR
-    WHERE VR.Codigo_Compania IN (
-        SELECT DISTINCT Codigo_Compania 
-        FROM COMPANIAS_VUELOS_MINIMOS
-    )
-    GROUP BY VR.Codigo_Compania
+COMPANIAS_CUMPLEN_REQUISITO_DIAS AS (
+	SELECT Codigo_Compania
+	FROM COMPANIAS_VUELOS_MINIMOS
+	GROUP BY Codigo_Compania
+	HAVING COUNT(*) = 3
 )
-SELECT 
-    C.Nombre AS Compania,
-    ROUND(R.Media_Retrasos, 2) AS Media_Retrasos_Minutos
-FROM MEDIA_RETRASOS_COMPANIA R
-JOIN Compagnia C ON R.Company = C.Codigo
-ORDER BY R.Media_Retrasos ASC;
+SELECT C.NOMBRE AS NOMBRE, RC.RETRASO_PROMEDIO
+FROM RETRASOS_COMPAGNIAS RC, COMPANIAS_CUMPLEN_REQUISITO_DIAS CR, COMPAGNIA C
+WHERE RC.CODIGO_COMPANIA = CR.CODIGO_COMPANIA AND C.CODIGO = CR.CODIGO_COMPANIA AND C.CODIGO = RC.CODIGO_COMPANIA; 
