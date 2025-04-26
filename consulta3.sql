@@ -1,19 +1,12 @@
-WITH fechaMasReciente AS (
-    SELECT MAX(v.Fecha) AS Fecha
-    FROM Vuelo v
-),
-edadAviones AS (
-    SELECT av.Matricula, EXTRACT(YEAR FROM (SELECT Fecha FROM fechaMasReciente)) - TO_NUMBER(av.Agno) AS Edad
-    FROM Avion av
-    WHERE av.Agno IS NOT NULL
-),
-MediaEdadPorAeropuerto AS (
-    SELECT a.IATA, a.Ciudad AS NombreAeropuerto, AVG(e.Edad) AS MediaEdad
-    FROM Aeropuerto a
-    JOIN Vuelo v ON a.IATA = v.IATAsali OR a.IATA = v.IATAdest
-    JOIN EdadAviones e ON v.Matricula = e.Matricula
-    GROUP BY a.IATA, a.Ciudad
+WITH edadMediaAeropuertos AS (
+SELECT AE.nombre, AE.iata, AVG(2025 - AV.agno) as media
+FROM aeropuerto AE, vuelo V, avion AV
+WHERE (AE.IATA = V.IATAsali or AE.iata = V.IATAdest) AND AV.matricula = V.matricula AND AV.agno IS NOT NULL
+GROUP BY AE.nombre, AE.iata
 )
-SELECT IATA AS CodigoAeropuerto, NombreAeropuerto, MediaEdad AS MediaEdadAviones
-FROM MediaEdadPorAeropuerto
-WHERE MediaEdad = (SELECT MIN(MediaEdad) FROM MediaEdadPorAeropuerto);
+SELECT S.nombre, S.iata, S.media
+FROM edadMediaAeropuertos S
+WHERE S.media = (
+SELECT MIN(media) as minimo
+FROM edadMediaAeropuertos A
+);
