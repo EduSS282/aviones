@@ -1,12 +1,12 @@
 WITH edadMediaAeropuertos AS (
-SELECT AE.nombre, AE.iata, AVG(2025 - AV.agno) as media
-FROM aeropuerto AE, vuelo V, avion AV
-WHERE (AE.IATA = V.IATAsali or AE.iata = V.IATAdest) AND AV.matricula = V.matricula AND AV.agno IS NOT NULL
-GROUP BY AE.nombre, AE.iata
+SELECT A.nombre, A.iata, AVG(2025 - AV.agno) as average
+FROM aeropuerto A, vuelo V, avion AV
+WHERE (A.IATA = V.IATAsali or A.IATA = V.IATAdest) AND AV.Matricula = V.Matricula AND AV.agno IS NOT NULL
+GROUP BY A.Nombre, A.IATA
 )
-SELECT S.nombre, S.iata, S.media
-FROM edadMediaAeropuertos S
-WHERE S.media = (
-    SELECT MIN(media) as minimo
-    FROM edadMediaAeropuertos A
+SELECT EMA.nombre, EMA.iata, EMA.average
+FROM edadMediaAeropuertos EMA
+WHERE EMA.average = (
+    SELECT MIN(average) as minimo
+    FROM edadMediaAeropuertos
 );
