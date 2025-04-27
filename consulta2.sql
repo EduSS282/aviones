@@ -6,10 +6,10 @@ WITH COMPAGNIA_MAX_AVIONES AS (
     FROM Compagnia C
     JOIN Vuelo V ON C.Codigo = V.Company
     GROUP BY C.Codigo, C.Nombre
-    HAVING COUNT(V.Matricula) = (
+    HAVING COUNT(DISTINCT V.Matricula) = (
         SELECT MAX(NumAviones)
         FROM (
-            SELECT C2.Codigo, COUNT(V2.Matricula) AS NumAviones
+            SELECT C2.Codigo, COUNT(DISTINCT V2.Matricula) AS NumAviones
             FROM Compagnia C2
             JOIN Vuelo V2 ON C2.Codigo = V2.Company
             GROUP BY C2.Codigo
