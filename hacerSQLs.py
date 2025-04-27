@@ -20,8 +20,8 @@ with open("C:\\Users\\eduar\\Documents\\SegundoIngInf\\SegundoCuatri\\Bases\\avi
     with open("C:\\Users\\eduar\\Documents\\SegundoIngInf\\SegundoCuatri\\Bases\\aviones\\SQL\\cancelaciones.sql", mode='w', encoding='utf-8', newline='') as cance_sql:
         cance_reader = csv.reader(fichero_cancelaciones, delimiter=';')
         for cance in cance_reader:
-            ID, ID_VUELO, CAUSA = cance
-            sql = f"INSERT INTO Cancelacion (ID, ID_VUELO, causa) VALUES ('{ID}', '{ID_VUELO}', '{CAUSA}');\n"
+            ID_VUELO, CAUSA = cance
+            sql = f"INSERT INTO Cancelacion (ID_VUELO, causa) VALUES ('{ID_VUELO}', '{CAUSA}');\n"
             cance_sql.write(sql)
 
 with open("C:\\Users\\eduar\\Documents\\SegundoIngInf\\SegundoCuatri\\Bases\\aviones\\DATOS\\Compagnias.csv") as fichero_compagnias:
@@ -60,8 +60,8 @@ with open("C:\\Users\\eduar\\Documents\\SegundoIngInf\\SegundoCuatri\\Bases\\avi
     with open("C:\\Users\\eduar\\Documents\\SegundoIngInf\\SegundoCuatri\\Bases\\aviones\\SQL\\Retrasos.sql", mode='w', encoding='utf-8', newline='') as retrasos_sql:
         retrasos_reader = csv.reader(fichero_retrasos, delimiter=';')
         for retraso in retrasos_reader:
-            ID, ID_VUELO, Motivo, Duracion = retraso
-            sql = f"INSERT INTO Retraso (ID, ID_VUELO, Motivo, Duracion) VALUES ('{ID}', '{ID_VUELO}', '{Motivo}','{Duracion}');\n"
+            ID_VUELO, Motivo, Duracion = retraso
+            sql = f"INSERT INTO Retraso (ID_VUELO, Motivo, Duracion) VALUES ('{ID_VUELO}', '{Motivo}','{Duracion}');\n"
             retrasos_sql.write(sql)
 
 with open("C:\\Users\\eduar\\Documents\\SegundoIngInf\\SegundoCuatri\\Bases\\aviones\\DATOS\\Vuelos.csv") as fichero_vuelos:

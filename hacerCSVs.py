@@ -73,7 +73,7 @@ with open("C:\\Users\\eduar\\Documents\\SegundoIngInf\\SegundoCuatri\\Bases\\avi
             claveArtificialRetraso = claveArtificialRetraso + 1
         if (lateAircraftDelay != "0" and lateAircraftDelay != ""):
             retraso_info_tarde_llegada = {
-                "ID_RETRASO" : claveArtificialRetraso,
+                #"ID_RETRASO" : claveArtificialRetraso,
                 "ID_VUELO" : claveArtificialVuelo,
                 "MOTIVO":  "TIEMPO",
                 "DURACION": lateAircraftDelay
@@ -91,7 +91,7 @@ with open("C:\\Users\\eduar\\Documents\\SegundoIngInf\\SegundoCuatri\\Bases\\avi
 
         if (cancelled != "0" and cancelled != ""):
             cancelacion_info = {
-                "ID_CANCELACION" : claveArtificialCancelacion,
+                #"ID_CANCELACION" : claveArtificialCancelacion,
                 "ID_VUELO" : claveArtificialVuelo,
                 "CAUSA" : cancellationName
             }
@@ -211,7 +211,7 @@ with open("C:\\Users\\eduar\\Documents\\SegundoIngInf\\SegundoCuatri\\Bases\\avi
 with open("C:\\Users\\eduar\\Documents\\SegundoIngInf\\SegundoCuatri\\Bases\\aviones\\DATOS\\Retrasos.csv", mode='w', encoding='utf-8', newline='') as retrasos_file:
     retrasos_writer = csv.writer(retrasos_file, delimiter=';')
     for delay in retraso:
-        retrasos_writer.writerow([delay['ID_RETRASO'], delay['ID_VUELO'], delay['MOTIVO'], delay['DURACION']])
+        retrasos_writer.writerow([delay['ID_VUELO'], delay['MOTIVO'], delay['DURACION']])
 
 with open("C:\\Users\\eduar\\Documents\\SegundoIngInf\\SegundoCuatri\\Bases\\aviones\\DATOS\\Desvios.csv", mode='w', encoding='utf-8', newline='') as desvios_file:
     desvios_writer = csv.writer(desvios_file, delimiter=';')
@@ -221,4 +221,4 @@ with open("C:\\Users\\eduar\\Documents\\SegundoIngInf\\SegundoCuatri\\Bases\\avi
 with open("C:\\Users\\eduar\\Documents\\SegundoIngInf\\SegundoCuatri\\Bases\\aviones\\DATOS\\Cancelaciones.csv", mode='w', encoding='utf-8', newline='') as cancelaciones_file:
     cancelaciones_writer = csv.writer(cancelaciones_file, delimiter=';')
     for cancellation in cancelacion:
-        cancelaciones_writer.writerow([cancellation['ID_CANCELACION'], cancellation['ID_VUELO'], cancellation['CAUSA']])
+        cancelaciones_writer.writerow([cancellation['ID_VUELO'], cancellation['CAUSA']])
