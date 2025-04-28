@@ -1,7 +1,7 @@
 -- Este alias lo que va a calcular son las compañías
 -- que operan al menos 1000 vuelos los días de la base
 -- de datos (que son 3 en este caso).
-CREATE INDEX codigo_compagnia_idx 
+CREATE INDEX codigo_compagnia_idx ON vuelo(Company);
 CREATE MATERIALIZED VIEW COMPANIAS_VUELOS_MINIMOS AS
     SELECT 
         V.Company AS Codigo_Compania,
