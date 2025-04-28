@@ -46,11 +46,11 @@ CREATE TABLE Vuelo (
     Fecha DATE NOT NULL,
     -- La hora de salida y llegada del vuelo no pueden ser nulos.
     -- Al igual que la matrícula, el aeropuerto de destino y llegada y la compañía que opera el vuelo.
-    HoraSalida NUMBER NOT NULL,
+    HoraSalida NUMBER,
     HoraSalidaEsperada NUMBER,
-    HoraLlegada NUMBER NOT NULL,
+    HoraLlegada NUMBER,
     HoraLlegadaEstimada NUMBER,
-    Matricula VARCHAR(10) NOT NULL,
+    Matricula VARCHAR(10),
     IATAdest VARCHAR(3) NOT NULL,
     IATAsali VARCHAR(3) NOT NULL,
     Company VARCHAR(10) NOT NULL,
@@ -88,5 +88,4 @@ CREATE TABLE Retraso (
     Duracion NUMBER NOT NULL,
     PRIMARY KEY (ID_Vuelo, Motivo),
     FOREIGN KEY (ID_Vuelo) REFERENCES Vuelo(ID)
-    CHECK (Duracion > 0)
 );
