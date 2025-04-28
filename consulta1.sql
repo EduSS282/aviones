@@ -2,12 +2,18 @@
 -- es calcular el retraso promedio de los 
 -- vuelos de cada compañía, con el fin
 -- de luego coger la compañía necesaria.
-WITH RETRASOS_COMPAGNIAS AS (
-    SELECT 
+WITH RETRASOS_VUELOS AS (
+	SELECT R.ID_Vuelo AS ID_VUELO, SUM(R.Duracion)
+	FROM Retraso R
+	GROUP BY R.ID_Vuelo
+) 
+	
+RETRASOS_COMPAGNIAS AS (
+	SELECT 
 	    V.Company AS Codigo_Compania,
 	    AVG(R.Duracion) AS Retraso_Promedio
 	FROM Vuelo V
-	JOIN Retraso R ON V.ID = R.ID_Vuelo
+	JOIN RETRASOS_VUELOS R ON V.ID = R.ID_Vuelo
 	WHERE R.Duracion IS NOT NULL
 	GROUP BY V.Company
 ),
