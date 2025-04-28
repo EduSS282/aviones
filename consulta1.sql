@@ -3,18 +3,16 @@
 -- vuelos de cada compañía, con el fin
 -- de luego coger la compañía necesaria.
 WITH RETRASOS_VUELOS AS (
-	SELECT R.ID_Vuelo AS ID_VUELO, SUM(R.Duracion)
+	SELECT R.ID_Vuelo AS ID_VUELO, SUM(R.Duracion) AS Duracion
 	FROM Retraso R
 	GROUP BY R.ID_Vuelo
-) 
-	
+),
 RETRASOS_COMPAGNIAS AS (
 	SELECT 
 	    V.Company AS Codigo_Compania,
 	    AVG(R.Duracion) AS Retraso_Promedio
 	FROM Vuelo V
 	JOIN RETRASOS_VUELOS R ON V.ID = R.ID_Vuelo
-	WHERE R.Duracion IS NOT NULL
 	GROUP BY V.Company
 ),
 -- Este alias lo que va a calcular son las compañías

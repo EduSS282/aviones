@@ -97,7 +97,7 @@ with open("C:\\Users\\eduar\\Documents\\SegundoIngInf\\SegundoCuatri\\Bases\\avi
             }
             cancelacion.append(cancelacion_info)
             claveArtificialCancelacion = claveArtificialCancelacion + 1
-        if ( (lateAircraftDelay == "0" or lateAircraftDelay == "") and (securityDelay != "0" and securityDelay != "") and (nasDelay != "0" and nasDelay != "") and (weatherDelay != "0" and weatherDelay != "") and (carrierDelay != "0" and carrierDelay != "")):
+        if ( (lateAircraftDelay == "0") and (securityDelay == "0") and (nasDelay == "0") and (weatherDelay == "0") and (carrierDelay == "0")):
             retraso_general_info = {
                 "ID_VUELO": claveArtificialVuelo,
                 "MOTIVO": "NO HAY RETRASO",
