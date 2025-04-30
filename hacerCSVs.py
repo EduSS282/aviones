@@ -97,13 +97,13 @@ with open("C:\\Users\\eduar\\Documents\\SegundoIngInf\\SegundoCuatri\\Bases\\avi
             }
             cancelacion.append(cancelacion_info)
             claveArtificialCancelacion = claveArtificialCancelacion + 1
-        if ( (lateAircraftDelay == "0") and (securityDelay == "0") and (nasDelay == "0") and (weatherDelay == "0") and (carrierDelay == "0")):
-            retraso_general_info = {
-                "ID_VUELO": claveArtificialVuelo,
-                "MOTIVO": "NO HAY RETRASO",
-                "DURACION": 0
-            }
-            retraso.append(retraso_general_info)
+        # if ( (lateAircraftDelay == "0") and (securityDelay == "0") and (nasDelay == "0") and (weatherDelay == "0") and (carrierDelay == "0")):
+        #     retraso_general_info = {
+        #         "ID_VUELO": claveArtificialVuelo,
+        #         "MOTIVO": "NO HAY RETRASO",
+        #         "DURACION": 0
+        #     }
+        #     retraso.append(retraso_general_info)
         if (flightNum != "") :
             vuelo_info = {
                 "ID" : claveArtificialVuelo,

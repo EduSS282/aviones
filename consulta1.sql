@@ -2,18 +2,23 @@
 -- es calcular el retraso promedio de los 
 -- vuelos de cada compañía, con el fin
 -- de luego coger la compañía necesaria.
-WITH RETRASOS_VUELOS AS (
-	SELECT R.ID_Vuelo AS ID_VUELO, SUM(R.Duracion) AS Duracion
-	FROM Retraso R
-	GROUP BY R.ID_Vuelo
+WITH Numero_Vuelos_Compagnia AS (
+	SELECT v.Company AS Compagnia, COUNT(ID) AS Vuelos_Totales
+	FROM Vuelo v
+	GROUP BY v.Company
 ),
-RETRASOS_COMPAGNIAS AS (
+Retrasos_Compagnias AS (
 	SELECT 
-	    V.Company AS Codigo_Compania,
-	    AVG(R.Duracion) AS Retraso_Promedio
+		V.Company AS Codigo_Compania,
+		SUM(r.Duracion) AS Total_Retraso
 	FROM Vuelo V
-	JOIN RETRASOS_VUELOS R ON V.ID = R.ID_Vuelo
+	JOIN Retraso r ON V.ID = r.ID_Vuelo
 	GROUP BY V.Company
+),
+Media_Compagnias AS (
+	SELECT NVC.Compagnia AS Compagnia, RC.Total_Retraso / NVC.Vuelos_Totales AS Media_Retraso
+	FROM Numero_Vuelos_Compagnia NVC
+	JOIN Retrasos_Compagnias RC ON RC.Codigo_Compania = NVC.Compagnia
 ),
 -- Este alias lo que va a calcular son las compañías
 -- que operan al menos 1000 vuelos los días de la base
@@ -30,7 +35,7 @@ COMPANIAS_VUELOS_MINIMOS AS (
 -- Este alias lo que hará será coger las compañías
 -- que cumplan los 1000 vuelos los 3 días de datos
 COMPANIAS_CUMPLEN_REQUISITO_DIAS AS (
-	SELECT Codigo_Compania
+	SELECT Codigo_Compania AS Compagnia
 	FROM COMPANIAS_VUELOS_MINIMOS
 	GROUP BY Codigo_Compania
 	HAVING COUNT(*) = 3
@@ -38,6 +43,7 @@ COMPANIAS_CUMPLEN_REQUISITO_DIAS AS (
 -- Por último, se cogerán los datos de los promedios
 -- de retraso antes calculados con un JOIN a las 
 -- compañías que cumplen los requisitos
-SELECT C.NOMBRE AS NOMBRE, RC.RETRASO_PROMEDIO
-FROM RETRASOS_COMPAGNIAS RC, COMPANIAS_CUMPLEN_REQUISITO_DIAS CR, COMPAGNIA C
-WHERE RC.CODIGO_COMPANIA = CR.CODIGO_COMPANIA AND C.CODIGO = CR.CODIGO_COMPANIA AND C.CODIGO = RC.CODIGO_COMPANIA; 
+SELECT C.NOMBRE AS NOMBRE, MC.Media_Retraso AS Media_Retraso
+FROM COMPANIAS_CUMPLEN_REQUISITO_DIAS CRD, Media_Compagnias MC, Compagnia C
+WHERE CRD.Compagnia = C.Codigo AND CRD.Compagnia = MC.Compagnia AND C.Codigo = MC.Compagnia
+ORDER BY Media_Retraso ASC;
