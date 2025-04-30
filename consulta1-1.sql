@@ -2,7 +2,7 @@
 -- que operan al menos 1000 vuelos los días de la base
 -- de datos (que son 3 en este caso).
 CREATE INDEX codigo_compagnia_idx ON vuelo(Company);
-CREATE MATERIALIZED VIEW COMPANIAS_VUELOS_MINIMOS AS
+CREATE VIEW COMPANIAS_VUELOS_MINIMOS AS
     SELECT 
         V.Company AS Codigo_Compania,
         V.Fecha,
@@ -14,18 +14,17 @@ CREATE MATERIALIZED VIEW COMPANIAS_VUELOS_MINIMOS AS
 -- es calcular el retraso promedio de los 
 -- vuelos de cada compañía, con el fin
 -- de luego coger la compañía necesaria.
-WITH RETRASOS_COMPAGNIAS AS (
+CREATE MATERIALIZED VIEW RETRASOS_COMPAGNIAS AS
     SELECT 
 	    V.Company AS Codigo_Compania,
 	    AVG(R.Duracion) AS Retraso_Promedio
 	FROM Vuelo V
 	JOIN Retraso R ON V.ID = R.ID_Vuelo
 	WHERE R.Duracion IS NOT NULL
-	GROUP BY V.Company
-),
+	GROUP BY V.Company;
 -- Este alias lo que hará será coger las compañías
 -- que cumplan los 1000 vuelos los 3 días de datos
-COMPANIAS_CUMPLEN_REQUISITO_DIAS AS (
+WITH COMPANIAS_CUMPLEN_REQUISITO_DIAS AS (
 	SELECT Codigo_Compania
 	FROM COMPANIAS_VUELOS_MINIMOS
 	GROUP BY Codigo_Compania

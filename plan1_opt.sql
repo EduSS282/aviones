@@ -1,0 +1,9 @@
+-- Por último, se cogerán los datos de los promedios
+-- de retraso antes calculados con un JOIN a las 
+-- compañías que cumplen los requisitos
+EXPLAIN PLAN FOR SELECT C.NOMBRE AS NOMBRE, RC.RETRASO_PROMEDIO
+FROM RETRASOS_COMPAGNIAS RC, (SELECT Codigo_Compania
+	FROM COMPANIAS_VUELOS_MINIMOS
+	GROUP BY Codigo_Compania
+	HAVING COUNT(*) = 3) CR, COMPAGNIA C
+WHERE RC.CODIGO_COMPANIA = CR.CODIGO_COMPANIA AND C.CODIGO = CR.CODIGO_COMPANIA AND C.CODIGO = RC.CODIGO_COMPANIA;

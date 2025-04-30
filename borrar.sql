@@ -1,4 +1,7 @@
 -- Drop tables in reverse order of creation to avoid foreign key constraint violations
+DROP MATERIALIZED VIEW MV_AEROPUERTOS_COMPAGNIAS;
+DROP MATERIALIZED VIEW MV_COMPAGNIA_MAX_AVIONES;
+DROP MATERIALIZED VIEW RETRASOS_COMPAGNIAS;
 DROP TABLE Retraso;
 DROP TABLE Desvio;
 DROP TABLE Cancelacion;

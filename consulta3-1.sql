@@ -1,15 +1,28 @@
-CREATE INDEX idx_vuelo_iatasali ON Vuelo(IATAsali);
-CREATE INDEX idx_vuelo_iatadest ON Vuelo(IATAdest);
-CREATE INDEX idx_vuelo_matricula ON Vuelo(Matricula);
-WITH edadMediaAeropuertos AS (
-SELECT AE.nombre, AE.iata, AVG(2025 - AV.agno) as media
-FROM aeropuerto AE, vuelo V, avion AV
-WHERE (AE.IATA = V.IATAsali or AE.iata = V.IATAdest) AND AV.matricula = V.matricula AND AV.agno IS NOT NULL
-GROUP BY AE.nombre, AE.iata
+-- Este alias lo que hace es hacer un JOIN entre
+-- aeropuerto, vuelos y avion, de manera que coge
+-- los vuelos que pasan por un aeropuerto y 
+-- calcula la media de edad de esos aviones.
+-- Este alias lo que hace es hacer un JOIN entre
+-- aeropuerto, vuelos y avion, de manera que coge
+-- los vuelos que pasan por un aeropuerto y 
+-- calcula la media de edad de esos aviones.
+CREATE MATERIALIZED VIEW AVIONES_AEROPUERTOS AS 
+SELECT DISTINCT A.nombre AS NOMBRE, A.iata AS IATA, (2025 - AV.agno) as edad, AV.MATRICULA
+FROM aeropuerto A, vuelo V, avion AV
+WHERE (A.IATA = V.IATAsali or A.IATA = V.IATAdest) AND AV.Matricula = V.Matricula AND AV.AGNO IS NOT NULL;
+
+WITH PROMEDIO_EDAD AS (
+    SELECT AA.NOMBRE, AA.IATA, AVG(edad) AS PROMEDIO
+    FROM AVIONES_AEROPUERTOS AA
+    GROUP BY AA.NOMBRE,AA.IATA
 )
-SELECT S.nombre, S.iata, S.media
-FROM edadMediaAeropuertos S
-WHERE S.media = (
-    SELECT MIN(media) as minimo
-    FROM edadMediaAeropuertos A
+-- Por último, se coge de las medias calculadas
+-- la menor de todas, mediante ese WHERE EMA.average
+-- que tiene un SELECT dentro, de manera que si varios
+-- tuviesen la misma media se cogiesen todos.
+SELECT *
+FROM PROMEDIO_EDAD PE
+WHERE PE.PROMEDIO = (
+    SELECT MIN(PROMEDIO) as minimo
+    FROM PROMEDIO_EDAD
 );
