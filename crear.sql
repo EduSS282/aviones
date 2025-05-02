@@ -89,3 +89,119 @@ CREATE TABLE Retraso (
     PRIMARY KEY (ID_Vuelo, Motivo),
     FOREIGN KEY (ID_Vuelo) REFERENCES Vuelo(ID)
 );
+
+/*
+ * TRIGGER: verificar_IATA
+ * 
+ * PROPÓSITO: Validar que los códigos IATA de aeropuertos en los vuelos 
+ * cumplan con el formato estándar internacional (3 letras mayúsculas).
+ * 
+ * ACCIÓN: Se ejecuta antes de insertar o actualizar un registro en la tabla Vuelo
+ */
+CREATE OR REPLACE TRIGGER verificar_IATA
+BEFORE INSERT OR UPDATE ON Vuelo
+FOR EACH ROW
+BEGIN
+    -- Valida que el código IATA de salida tenga exactamente 3 letras mayúsculas
+    IF NOT REGEXP_LIKE(:NEW.IATAsali, '^[A-Z]{3}$') THEN
+        RAISE_APPLICATION_ERROR(-20003, 'Error: El IATA de salida debe tener exactamente 3 letras mayúsculas.');
+    END IF;
+    
+    -- Valida que el código IATA de destino tenga exactamente 3 letras mayúsculas
+    IF NOT REGEXP_LIKE(:NEW.IATAdest, '^[A-Z]{3}$') THEN
+        RAISE_APPLICATION_ERROR(-20004, 'Error: El IATA de destino debe tener exactamente 3 letras mayúsculas.');
+    END IF;
+END;
+/
+
+/*
+ * TRIGGER: validar_matricula_vuelo
+ * 
+ * PROPÓSITO: Garantizar que las matrículas de aviones sigan el formato estándar
+ * utilizado en los registros de la FAA (Administración Federal de Aviación de EE.UU.)
+ * 
+ * ACCIÓN: Se ejecuta antes de insertar un registro en la tabla Vuelo
+ */
+CREATE OR REPLACE TRIGGER validar_matricula_vuelo
+BEFORE INSERT ON Vuelo
+FOR EACH ROW
+BEGIN
+  -- Valida que la matrícula cumpla con el formato estándar:
+  -- Debe comenzar con N seguido de 1 a 6 caracteres alfanuméricos
+  IF NOT REGEXP_LIKE(:NEW.Matricula, '^N[0-9A-Z]{1,6}$') THEN
+      RAISE_APPLICATION_ERROR(-20004, 'Error: La matrícula debe seguir el formato N seguido de 1-6 caracteres alfanuméricos');
+  END IF;
+END;
+/
+
+/*
+ * TRIGGER: validar_desvio
+ * 
+ * PROPÓSITO: Este trigger realiza múltiples validaciones para garantizar la 
+ * integridad de los datos en la tabla Desvio, verificando que:
+ * 1. El vuelo referenciado exista
+ * 2. El aeropuerto de desvío no sea el mismo que el de origen
+ * 3. El aeropuerto de desvío exista en la base de datos
+ * 4. El código IATA del aeropuerto de desvío tenga el formato correcto
+ *
+ * ACCIÓN: Se ejecuta antes de insertar o actualizar un registro en la tabla Desvio
+ */
+CREATE OR REPLACE TRIGGER validar_desvio
+BEFORE INSERT OR UPDATE ON Desvio
+FOR EACH ROW
+DECLARE
+    v_iata_origen VARCHAR2(3);  -- Almacena IATA de origen del vuelo
+    v_existe_aeropuerto NUMBER; -- Para verificar existencia del aeropuerto de desvío
+    v_existe_vuelo NUMBER;      -- Para verificar existencia del vuelo
+BEGIN
+    -- 1. Verificar que el vuelo existe
+    -- Es importante validar esto primero para evitar referencias huérfanas
+    BEGIN
+        SELECT COUNT(*) INTO v_existe_vuelo
+        FROM Vuelo
+        WHERE ID = :NEW.ID_Vuelo;
+        
+        IF v_existe_vuelo = 0 THEN
+            RAISE_APPLICATION_ERROR(-20008, 'Error: El vuelo ' || :NEW.ID_Vuelo || ' no existe');
+        END IF;
+    END;   
+    -- 2. Obtener aeropuerto de origen del vuelo
+    -- Utilizamos un bloque separado para manejar específicamente la excepción NO_DATA_FOUND
+    BEGIN
+        SELECT IATAsali INTO v_iata_origen 
+        FROM Vuelo 
+        WHERE ID = :NEW.ID_Vuelo;
+    EXCEPTION
+        WHEN NO_DATA_FOUND THEN
+            RAISE_APPLICATION_ERROR(-20009, 'Error: No se pudo obtener el aeropuerto de origen del vuelo');
+    END;   
+    -- 3. Validar que el aeropuerto de desvío no sea el mismo que el de origen
+    -- Un avión no debería desviarse al mismo aeropuerto del que despegó
+    IF :NEW.IATA_desv = v_iata_origen THEN
+        RAISE_APPLICATION_ERROR(-20007, 'Error: El aeropuerto de desvio no puede ser el mismo (' || 
+                                       :NEW.IATA_desv || ') que el de origen');
+    END IF;
+    -- 4. Verificar que el aeropuerto de desvío exista
+    -- El aeropuerto de desvío debe estar registrado en nuestra base de datos
+    BEGIN
+        SELECT COUNT(*) INTO v_existe_aeropuerto
+        FROM Aeropuerto
+        WHERE IATA = :NEW.IATA_desv;
+        IF v_existe_aeropuerto = 0 THEN
+            RAISE_APPLICATION_ERROR(-20010, 'Error: El aeropuerto de desvio ' || :NEW.IATA_desv || ' no existe');
+        END IF;
+    END;
+    -- 5. Validación adicional: formato IATA (3 letras mayúsculas)
+    -- Aunque debería ser garantizado por las restricciones en la tabla Aeropuerto,
+    -- realizamos esta validación como capa adicional de seguridad
+    IF NOT REGEXP_LIKE(:NEW.IATA_desv, '^[A-Z]{3}$') THEN
+        RAISE_APPLICATION_ERROR(-20011, 'Error: El código IATA de desvío debe tener 3 letras mayusculas');
+    END IF;
+EXCEPTION
+    -- Captura de cualquier otra excepción no manejada específicamente
+    WHEN OTHERS THEN
+        -- Registrar error adicional si ocurre (para depuración)
+        DBMS_OUTPUT.PUT_LINE('Error en validar_desvio: ' || SQLERRM);
+        RAISE;  -- Relanzar el error original para mantener la trazabilidad
+END;
+/
