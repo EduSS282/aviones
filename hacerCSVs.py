@@ -80,6 +80,13 @@ with open("C:\\Users\\eduar\\Documents\\SegundoIngInf\\SegundoCuatri\\Bases\\avi
             }
             retraso.append(retraso_info_tarde_llegada)
             claveArtificialRetraso = claveArtificialRetraso + 1
+        if (divArrDelay != "0" and divArrDelay != ""):
+            retraso_desvio = {
+                "ID_VUELO" : claveArtificialVuelo,
+                "MOTIVO" : "DESVIO",
+                "DURACION": divArrDelay
+            }
+            retraso.append(retraso_desvio)
         if (divAirportLandings != "0" and divAirportLandings != "" and div1airport != destiata):
             desvio_info = {
                 "ID_DESVIO": claveArtificialDesvio,
